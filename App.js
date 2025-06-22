@@ -1,3 +1,4 @@
+import Home from "./App/Home";
 import "./global.css"
 import { Text, View } from "react-native";
  
@@ -7,6 +8,7 @@ export default function App() {
       <Text className="text-xl font-bold text-blue-500">
         Welcome to Nativewind!
       </Text>
+      <Home />
     </View>
   );
 }
