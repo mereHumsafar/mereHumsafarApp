@@ -4,7 +4,7 @@ import React from 'react'
 export default function Home() {
   return (
     <View>
-      <Text className='text-2xl '>Home</Text>
+      <Text className='text-2xl text-primary '>Home</Text>
     </View>
   )
 }
