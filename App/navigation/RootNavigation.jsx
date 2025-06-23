@@ -7,6 +7,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import Registration from "../screen/Registration";
 import '../../global.css'
 import Login from "../screen/Login";
+import ForgotPassword from "../screen/ForgotPassword";
 const Stack = createNativeStackNavigator();
 
 export default function RootNavigation() {
@@ -17,12 +18,17 @@ export default function RootNavigation() {
           <Stack.Screen
             name="Registration"
             component={Registration}
-            options={{ title: "Welcome Home", headerShown: false }}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="Login"
             component={Login}
-            options={{ title: "Welcome Home" }}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ForgotPassword"
+            component={ForgotPassword}
+            // options={{ title: "Welcome Home" }}
           />
         </Stack.Navigator>
       </NavigationContainer>

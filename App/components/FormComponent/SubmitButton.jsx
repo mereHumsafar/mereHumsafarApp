@@ -52,7 +52,7 @@ export default function SubmitButton({
         className={`
           ${getBackgroundColor()}
           ${getBorderColor()}
-          py-3 px-6 rounded-lg
+          py-3 px-6 rounded-full
           flex-row items-center justify-center
           ${disabled ? "opacity-50" : "opacity-100"}
           ${fullWidth ? "w-full" : ""}

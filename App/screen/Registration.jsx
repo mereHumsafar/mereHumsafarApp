@@ -16,7 +16,6 @@ export default function Registration() {
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
-    // Handle registration logic here
   };
 
   return (
@@ -92,19 +91,6 @@ export default function Registration() {
                 }
               }}
               containerClass="mb-4"
-            />
-
-            <InputField
-              name="confirmPassword"
-              control={control}
-              placeholder="Confirm Password"
-              icon="lock-closed-outline"
-              secureTextEntry
-              rules={{
-                required: "Please confirm your password",
-                validate: value => value === watch('password') || "Passwords don't match"
-              }}
-              containerClass="mb-6"
             />
 
             <SubmitButton
