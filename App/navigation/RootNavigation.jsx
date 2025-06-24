@@ -4,20 +4,21 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import Registration from "../screen/Registration";
 import '../../global.css'
 import Login from "../screen/Login";
 import ForgotPassword from "../screen/ForgotPassword";
+import Signup from "../screen/Signup";
+import RegistrationStep from "../screen/RegistrationStep";
 const Stack = createNativeStackNavigator();
 
 export default function RootNavigation() {
   return (
   
       <NavigationContainer >
-        <Stack.Navigator  initialRouteName="Registration">
+        <Stack.Navigator  initialRouteName="Signup">
           <Stack.Screen
-            name="Registration"
-            component={Registration}
+            name="Signup"
+            component={Signup}
             options={{ headerShown: false }}
           />
           <Stack.Screen
@@ -28,7 +29,11 @@ export default function RootNavigation() {
           <Stack.Screen
             name="ForgotPassword"
             component={ForgotPassword}
-            // options={{ title: "Welcome Home" }}
+          />
+          <Stack.Screen
+            name="Registration"
+            component={RegistrationStep}
+            options={{ headerShown: false }}
           />
         </Stack.Navigator>
       </NavigationContainer>

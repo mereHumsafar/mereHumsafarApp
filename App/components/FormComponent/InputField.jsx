@@ -20,7 +20,7 @@ export default function InputField({
           <Ionicons 
             name={icon} 
             size={20} 
-            color="#6B7280" 
+            color="#d90429" 
             style={{ marginRight: 10 }} 
           />
         )}

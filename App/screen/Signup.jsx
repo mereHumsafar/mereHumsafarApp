@@ -1,11 +1,12 @@
 import React from "react";
-import { View, Text, ScrollView, ImageBackground } from "react-native";
+import { View, Text, ScrollView, ImageBackground, Pressable } from "react-native";
 import { useForm } from "react-hook-form";
 import InputField from "../components/FormComponent/InputField";
 import { useNavigation } from "@react-navigation/native";
 import SubmitButton from "../components/FormComponent/SubmitButton";
+import { Button } from "react-native-web";
 
-export default function Registration() {
+export default function Signup() {
   const navigation = useNavigation();
   const {
     control,
@@ -15,7 +16,7 @@ export default function Registration() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Form Data:", data);
+    navigation.navigate("Registation");
   };
 
   return (
@@ -95,10 +96,12 @@ export default function Registration() {
 
             <SubmitButton
               title="Register Now"
-              onPress={handleSubmit(onSubmit)}
+              // onPress={handleSubmit(onSubmit)}
+              onPress={()=>navigation.navigate("Registration")}
               variant="primary"
               fullWidth
             />
+
 
             <View className="flex-row justify-center mt-6">
               <Text className="text-gray-600">Already have an account? </Text>
