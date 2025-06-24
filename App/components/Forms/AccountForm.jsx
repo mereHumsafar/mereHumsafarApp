@@ -12,6 +12,8 @@ import InputField from '../FormComponent/InputField';
 import { Dropdown } from 'react-native-element-dropdown';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
+import { useNavigation } from '@react-navigation/native';
+import SubmitButton from '../FormComponent/SubmitButton';
 export default function AccountForm({ onNext }) {
     const {
         control,
@@ -20,9 +22,10 @@ export default function AccountForm({ onNext }) {
     } = useForm();
 
     const [focusField, setFocusField] = useState(null);
+    const navigation = useNavigation();
 
     const onSubmit = (data) => {
-        console.log('Account Form Data:', data);
+        navigation.navigate("BottomTabs");
         onNext?.();
     };
 
@@ -37,7 +40,7 @@ export default function AccountForm({ onNext }) {
 
                 <Image
                     source={{ uri: "https://images.unsplash.com/photo-1545287092-36b94da710ab?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }}
-                    className="w-40 h-40 self-center mb-5 rounded-full"
+                    className="w-28 h-28 self-center mb-5 rounded-full"
                     resizeMode="contain "
                 />
                 <Pressable className="flex-row items-center border-primary justify-center w-1/2 gap-2 border rounded-full p-2">
@@ -131,14 +134,12 @@ export default function AccountForm({ onNext }) {
                 containerClass="mb-5"
             />
 
-            <TouchableOpacity
-                onPress={handleSubmit(onSubmit)}
-                className="bg-[#F43F5E] py-3 rounded-lg"
-            >
-                <Text className="text-center text-white font-semibold text-base">
-                    Continue
-                </Text>
-            </TouchableOpacity>
+            <SubmitButton
+                title="Next"
+                onPress={()=>onSubmit()}
+                containerClass="mb-5"
+            />
+
         </ScrollView>
     );
 }

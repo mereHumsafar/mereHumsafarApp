@@ -9,11 +9,13 @@ import Login from "../screen/Login";
 import ForgotPassword from "../screen/ForgotPassword";
 import Signup from "../screen/Signup";
 import RegistrationStep from "../screen/RegistrationStep";
+import BottomTabs from "./BottomTabs";
 const Stack = createNativeStackNavigator();
 
 export default function RootNavigation() {
-  return (
   
+  return (
+
       <NavigationContainer >
         <Stack.Navigator  initialRouteName="Signup">
           <Stack.Screen
@@ -34,6 +36,15 @@ export default function RootNavigation() {
             name="Registration"
             component={RegistrationStep}
             options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="BottomTabs"
+            
+            component={BottomTabs}
+            options={{ headerShown: false,
+headerBackButtonMenuEnabled: false
+
+             }}
           />
         </Stack.Navigator>
       </NavigationContainer>

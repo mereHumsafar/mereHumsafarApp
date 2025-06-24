@@ -4,8 +4,10 @@ import BasicForm from '../components/Forms/BasicForm';
 import AddressForm from '../components/Forms/AddressForm';
 import FamilyForm from '../components/Forms/FamilyForm';
 import AccountForm from '../components/Forms/AccountForm';
+import { useNavigation } from '@react-navigation/native';
 
 export default function RegistrationStep() {
+    const navigation = useNavigation();
     const defaultScrollViewProps = {
         keyboardShouldPersistTaps: 'handled',
         contentContainerStyle: {
@@ -27,7 +29,7 @@ export default function RegistrationStep() {
     };
 
     const onSubmitSteps = () => {
-        console.log('called submit step');
+        navigation.navigate("BottomTabs");
     };
 
     return (
@@ -71,12 +73,14 @@ export default function RegistrationStep() {
                 </ProgressStep>
                 <ProgressStep
                     label='Finish'
+                    buttonFinishText='Submit'
+                    buttonFinishTextColor='black'
                     onPrevious={onPrevStep}
                     onSubmit={onSubmitSteps}
                     buttonBottomOffset={50}
                     scrollViewProps={defaultScrollViewProps}
                 >
-                    <AccountForm/>
+                    <AccountForm onNext={onNextStep}/>
                 </ProgressStep>
             </ProgressSteps>
         </View>
