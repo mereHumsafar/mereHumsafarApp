@@ -11,7 +11,8 @@ import InputField from '../FormComponent/InputField';
 import { Dropdown } from 'react-native-element-dropdown';
 import { FontAwesome6, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-
+import DateTimePicker from '@react-native-community/datetimepicker';
+import { Modal, Pressable } from 'react-native';
 
 export default function BasicForm({ onNext }) {
     const {
@@ -21,6 +22,9 @@ export default function BasicForm({ onNext }) {
 
     const [gender, setGender] = useState(null);
     const [isFocus, setIsFocus] = useState(false);
+    const [showDatePicker, setShowDatePicker] = useState(false);
+    const [dob, setDob] = useState(null);
+
 
     return (
         <ScrollView
@@ -28,15 +32,6 @@ export default function BasicForm({ onNext }) {
             contentContainerStyle={{ paddingBottom: 60 }}
             keyboardShouldPersistTaps="handled"
         >
-
-            <InputField
-                name="fullName"
-                control={control}
-                placeholder="Full Name"
-                icon="person-outline"
-                rules={{ required: 'Full Name is required' }}
-                containerClass="mb-5"
-            />
 
 
             <View className="flex-row justify-between items-center">
@@ -73,23 +68,83 @@ export default function BasicForm({ onNext }) {
                 )}
             />
 
-            {/* ── DOB & Age ── */}
-            <InputField
+            <Controller
+                control={control}
                 name="dateOfBirth"
-                control={control}
-                placeholder="Date of Birth (DD/MM/YYYY)"
-                icon="calendar-outline"
                 rules={{ required: 'Date of Birth is required' }}
-                containerClass="mb-5"
+                render={({ field: { onChange, value } }) => (
+                    <>
+                        <TouchableOpacity
+                            onPress={() => setShowDatePicker(true)}
+                            className="border border-gray-300 rounded-lg p-4 mb-5 flex-row items-center gap-4"
+                        >
+                            <Ionicons name="calendar-outline" size={20} color="#d90429" />
+                            <Text className={`${value ? 'text-gray-900' : 'text-gray-400'}`}>
+                                {value ? value : 'Date of Birth (DD/MM/YYYY)'}
+                            </Text>
+                        </TouchableOpacity>
+
+                        {errors.dateOfBirth && (
+                            <Text className="text-xs text-red-500 -mt-4 mb-4">
+                                {errors.dateOfBirth.message}
+                            </Text>
+                        )}
+
+                        {showDatePicker && (
+                            Platform.OS === 'android' ? (
+                                <DateTimePicker
+                                    value={dob ? new Date(dob) : new Date()}
+                                    mode="date"
+                                    display="default"
+                                    maximumDate={new Date()}
+                                    onChange={(event, selectedDate) => {
+                                        setShowDatePicker(false);
+                                        if (event.type === 'set' && selectedDate) {
+                                            const formatted = selectedDate.toLocaleDateString('en-GB'); // DD/MM/YYYY
+                                            setDob(selectedDate);
+                                            onChange(formatted);
+                                        }
+                                    }}
+                                />
+                            ) : (
+                                <Modal
+                                    transparent={true}
+                                    animationType="slide"
+                                    visible={showDatePicker}
+                                >
+                                    <View className="flex-1 justify-end bg-black/30">
+                                        <View className="bg-white rounded-t-2xl px-4 pt-4 pb-8">
+                                            <DateTimePicker
+                                                value={dob ? new Date(dob) : new Date()}
+                                                mode="date"
+                                                display="spinner"
+                                                textColor='black'
+                                                maximumDate={new Date()}
+                                                onChange={(event, selectedDate) => {
+                                                    if (event.type === 'set' && selectedDate) {
+                                                        const formatted = selectedDate.toLocaleDateString('en-GB');
+                                                        setDob(selectedDate);
+                                                        onChange(formatted);
+                                                    }
+                                                }}
+                                            />
+                                            <TouchableOpacity
+                                                onPress={() => setShowDatePicker(false)}
+                                                className="mt-4 bg-rose-500 py-3 rounded-lg"
+                                            >
+                                                <Text className="text-center text-white font-semibold">
+                                                    Done
+                                                </Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                    </View>
+                                </Modal>
+                            )
+                        )}
+                    </>
+                )}
             />
-            <InputField
-                name="age"
-                control={control}
-                placeholder="Age"
-                icon="hourglass-outline"
-                rules={{ required: 'Age is required' }}
-                containerClass="mb-5"
-            />
+
 
             <Controller
                 control={control}
@@ -113,7 +168,7 @@ export default function BasicForm({ onNext }) {
                         }}
                         itemTextStyle={{
                             fontSize: 14,
-                            color: '#1F2937', 
+                            color: '#1F2937',
                         }}
                         selectedTextStyle={{
                             fontSize: 14,
@@ -230,7 +285,7 @@ export default function BasicForm({ onNext }) {
                             onChange(item.value);
                             setIsFocus(false);
                         }}
-                         renderLeftIcon={() => (
+                        renderLeftIcon={() => (
                             <MaterialCommunityIcons color="#d90429" className="mr-2" name="heart-multiple-outline" size={20} />
                         )}
                     />

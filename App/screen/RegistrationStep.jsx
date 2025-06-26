@@ -34,18 +34,18 @@ export default function RegistrationStep() {
 
     return (
         <View className="flex-1 bg-white pt-5 ">
-            <ProgressSteps  activeStepIconBorderColor='#d90429' activeStepTextColor='black' completedCheckColor='white' completedProgressBarColor='#d90429' activeStepIconColor='#d90429' completedStepIconColor='#d90429' activeStepNumColor='white' >
+            <ProgressSteps activeStepIconBorderColor='#d90429' activeStepTextColor='black' completedCheckColor='white' completedProgressBarColor='#d90429' activeStepIconColor='#d90429' completedStepIconColor='#d90429' activeStepNumColor='white' >
                 <ProgressStep
                     label='Basic'
                     buttonFillColor='#d90429'
                     buttonNextTextColor='black'
                     buttonBorderColor='#d90429'
-                     buttonBottomOffset={50}
-                    onNext={onPaymentStepComplete}
+                    buttonBottomOffset={50}
+                    onNext={onNextStep}
                     onPrevious={onPrevStep}
                     scrollViewProps={defaultScrollViewProps}
                 >
-                   <BasicForm/>
+                    <BasicForm />
                 </ProgressStep>
                 <ProgressStep
                     buttonNextTextColor='black'
@@ -58,8 +58,8 @@ export default function RegistrationStep() {
                     onNext={onNextStep}
                     onPrevious={onPrevStep}
                     scrollViewProps={defaultScrollViewProps}
-                    >
-                    <AddressForm/>
+                >
+                    <AddressForm />
                 </ProgressStep>
                 <ProgressStep
                     buttonNextTextColor='black'
@@ -68,8 +68,8 @@ export default function RegistrationStep() {
                     buttonBottomOffset={50}
                     onPrevious={onPrevStep}
                     scrollViewProps={defaultScrollViewProps}
-                    >
-                   <FamilyForm/>
+                >
+                    <FamilyForm />
                 </ProgressStep>
                 <ProgressStep
                     label='Finish'
@@ -80,7 +80,7 @@ export default function RegistrationStep() {
                     buttonBottomOffset={50}
                     scrollViewProps={defaultScrollViewProps}
                 >
-                    <AccountForm onNext={onNextStep}/>
+                    <AccountForm onNext={onNextStep} />
                 </ProgressStep>
             </ProgressSteps>
         </View>

@@ -1,19 +1,18 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Home from '../screen/AppScreen/Home';
-import Notification from '../screen/AppScreen/Notification';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Profile from '../screen/AppScreen/Profile';
 import Search from '../screen/AppScreen/Search';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import HomeDrawer from './HomeDrawer';
+import NotificationNavigation from './NotificationNavigation';
 export default function BottomTabs() {
     const Tab = createBottomTabNavigator();
     return (
         <Tab.Navigator>
-            <Tab.Screen name="Home"
-
+            <Tab.Screen  name="HomeNavigation"
                 options={{
                     tabBarActiveTintColor: 'black',
+                    headerShown : false,
+                    title : 'Home',
                     tabBarIcon: () => {
                         return (
                             <Ionicons name="home-outline" size={20} color="black" />
@@ -21,11 +20,13 @@ export default function BottomTabs() {
                     }
                 }}
 
-                component={Home} />
-            <Tab.Screen name="Notification"
+                component={HomeDrawer} />
+            <Tab.Screen name="NotificationNavigation"
                 options={{
                     tabBarActiveTintColor: 'black',
                     tabBarBadge: 3,
+                    headerShown : false,
+                    title : 'Notification',
                     tabBarBadgeStyle: {
                         backgroundColor: 'red',
                         color: 'white'
@@ -36,7 +37,19 @@ export default function BottomTabs() {
                         )
                     }
 
-                }} component={Notification} />
+                }} component={NotificationNavigation} />
+
+            <Tab.Screen name="Search"
+                options={{
+                    tabBarActiveTintColor: 'black',
+                    tabBarIcon: () => {
+                        return (
+                            <Ionicons name="search-outline" size={20} color="black" />
+                        )
+                    }
+                }}
+                component={Search}
+            />
             <Tab.Screen name="Profile"
                 options={{
                     tabBarActiveTintColor: 'black',
@@ -49,17 +62,7 @@ export default function BottomTabs() {
                 }}
                 component={Profile}
             />
-            <Tab.Screen name="Search"
-                options={{
-                    tabBarActiveTintColor: 'black',
-                    tabBarIcon: () => {
-                        return (
-                            <Ionicons name="search-outline" size={20} color="black" />
-                        )
-                    }
-                }}
-                component={Search}
-            />
+
         </Tab.Navigator>
     )
 }
