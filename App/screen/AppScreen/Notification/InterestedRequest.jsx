@@ -77,7 +77,7 @@ const requests = [
 ];
 
 
-export default function Requests() {
+export default function InterestedRequest() {
     const renderItem = ({ item }) => (
         <View className="flex-row items-center px-4 py-3 border-b border-gray-100 bg-white">
             <Image
@@ -104,7 +104,7 @@ export default function Requests() {
     return (
        
 
-            <SafeAreaView className="flex-1 bg-white">
+            <SafeAreaView className="flex-1 bg-white" edges={['top']}>
               
                 <FlatList
                 className=" pt-12"

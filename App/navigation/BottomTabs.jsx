@@ -7,8 +7,8 @@ import NotificationNavigation from './NotificationNavigation';
 export default function BottomTabs() {
     const Tab = createBottomTabNavigator();
     return (
-        <Tab.Navigator>
-            <Tab.Screen  name="HomeNavigation"
+        <Tab.Navigator >
+            <Tab.Screen   name="HomeNavigation"
                 options={{
                     tabBarActiveTintColor: 'black',
                     headerShown : false,

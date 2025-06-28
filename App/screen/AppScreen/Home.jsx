@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, FlatList, TouchableOpacity, Image, ScrollView, Pressable } from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { View, Text, FlatList, TouchableOpacity, Image, ScrollView, Pressable, Platform, Dimensions } from 'react-native';
 import { FontAwesome6, Ionicons } from '@expo/vector-icons';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 
@@ -14,18 +14,25 @@ const dummyProfiles = [
 
 export default function Home() {
   return (
-    <SafeAreaView className="flex-1 bg-white ">
+    <SafeAreaView className="flex-1 bg-white" edges={['top']}>
 
-    <ScrollView className="flex-1 bg-white px-4 pt-14">
-      <Section title="Recommended For You" data={dummyProfiles} />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingTop: Platform.OS === 'ios' ? 55 : 80,
 
-      <Section title="New Joinees" data={dummyProfiles} />
+        }}
+        className={`flex-1 bg-white px-4 `}>
+        <Banner />
+        <Section title="Recommended For You" data={dummyProfiles} />
 
-      <Section title="Premium Profiles" data={dummyProfiles} />
+        <Section title="New Joinees" data={dummyProfiles} />
 
-      <Section title="Same City Matches" data={dummyProfiles} />
+        <Section title="Premium Profiles" data={dummyProfiles} />
 
-    </ScrollView>
+        <Section title="Same City Matches" data={dummyProfiles} />
+
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -56,13 +63,111 @@ function Section({ title, data }) {
               <Text className="text-xs absolute bottom-3 px-2 py-[2px] rounded-md bg-black/50 left-2 text-white font-bold">{item.location}</Text>
             </View>
             <Text className="font-semibold text-sm text-gray-800 text-left">{item.name}</Text>
-            <Pressable className='w-full bg-primary py-1 px-2 rounded-lg flex-row gap-1 justify-between items-center mt-2'>
+            <Pressable className='w-full bg-primary py-2 px-2 rounded-lg flex-row gap-1 justify-center items-center mt-2'>
               <EvilIcons name="sc-telegram" size={16} color="white" />
               <Text className="text-white text-xs uppercase font-bold" >Interested</Text>
             </Pressable>
           </View>
         </>}
       />
+    </View>
+  );
+}
+
+
+
+
+
+// function Banner() {
+//   const { width } = Dimensions.get('window');
+//   const images = [
+//     'https://img.freepik.com/premium-photo/valentines-day-card-with-girt-box-heart-shapes-pink-background-banner-with-decoration-copy-space-text-beauty-design-top-view-concept-holiday-love-fashion_788189-14027.jpg?w=2000',
+//     'https://img.freepik.com/free-vector/clean-love-banner-valentines-day-design_1017-29745.jpg?t=st=1750952874~exp=1750956474~hmac=62e893c587922176fd60c363a4c19713190fba8215ad8ff081ca06c1b8ae4457&w=2000',
+//     'https://img.freepik.com/free-vector/minimal-valentines-day-banner-with-paper-balloon-hearts_1017-29884.jpg?t=st=1750953505~exp=1750957105~hmac=9de0a9feb345e26b1ac11a1e74acacbf3e398f82d42ffd415624487858413d31&w=2000',
+//     'https://img.freepik.com/premium-vector/red-white-paper-heart-shapes-pastel-pink-background-copy-space-love-valentine-concept_1302-40871.jpg',
+//   ];
+
+//   return (
+//     <View className="w-full items-center my-5">
+//       <FlatList
+//       snapToAlignment='center'
+//       snapToOffsets={[0, width, width * 2]}
+//         horizontal
+//         pagingEnabled
+//         showsHorizontalScrollIndicator={false}
+//         data={images}
+//         keyExtractor={(_, index) => index.toString()}
+//         renderItem={({ item }) => (
+//           <Image
+//             source={{ uri: item }}
+//             style={{ width: width - 50,  height: 180 }}
+//             className="rounded-lg mx-3"
+//             resizeMode="cover"
+//           />
+//         )}
+//       />
+//     </View>
+//   );
+// }
+
+
+
+
+function Banner() {
+  const flatListRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const { width } = Dimensions.get('window');
+const images = [
+  'https://img.freepik.com/premium-photo/valentines-day-card-with-girt-box-heart-shapes-pink-background-banner-with-decoration-copy-space-text-beauty-design-top-view-concept-holiday-love-fashion_788189-14027.jpg?w=2000',
+  'https://img.freepik.com/free-vector/clean-love-banner-valentines-day-design_1017-29745.jpg?t=st=1750952874~exp=1750956474~hmac=62e893c587922176fd60c363a4c19713190fba8215ad8ff081ca06c1b8ae4457&w=2000',
+  'https://img.freepik.com/free-vector/minimal-valentines-day-banner-with-paper-balloon-hearts_1017-29884.jpg?t=st=1750953505~exp=1750957105~hmac=9de0a9feb345e26b1ac11a1e74acacbf3e398f82d42ffd415624487858413d31&w=2000',
+  'https://img.freepik.com/premium-vector/red-white-paper-heart-shapes-pastel-pink-background-copy-space-love-valentine-concept_1302-40871.jpg',
+];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let nextIndex = (currentIndex + 1) % images.length;
+      flatListRef.current?.scrollToIndex({ index: nextIndex, animated: true });
+      setCurrentIndex(nextIndex);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  return (
+    <View className="w-full mb-4 relative">
+      <FlatList
+        ref={flatListRef}
+        data={images}
+        keyExtractor={(_, index) => index.toString()}
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        onMomentumScrollEnd={(e) => {
+          const offsetX = e.nativeEvent.contentOffset.x;
+          const index = Math.round(offsetX / width);
+          setCurrentIndex(index);
+        }}
+        renderItem={({ item }) => (
+          <Image
+            source={{ uri: item }}
+            width={width }
+            className="w-{} h-44 "
+            resizeMode="cover"
+          />
+        )}
+      />
+      <View className="absolute bottom-2 left-0 right-0 flex-row justify-center space-x-2">
+        {images.map((_, index) => (
+          <View
+            key={index}
+            className={`w-2 h-2 mx-1 rounded-full ${
+              index === currentIndex ? 'bg-primary' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+      </View>
     </View>
   );
 }
