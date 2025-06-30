@@ -14,6 +14,7 @@ export default function NotificationNavigation() {
   const screenOptionsWithBlur = {
     headerTransparent: true,
     headerBackTitle: 'Back',
+    
     headerBackground: () => (
       <BlurView intensity={20} tint="light" style={{ flex: 1 }} />
     ),

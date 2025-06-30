@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F0C9C97D5AD4D9F72887F84 /* libPods-humsafar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBDE816B98A4591188A9666 /* libPods-humsafar.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		35FE3EF4E4841BBFB3B7ACA0 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE55FDE959F52FEC50F7454 /* ExpoModulesProvider.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		58B7154CCE74649B5DAD5295 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6C8DC9D40E7CBDBF92597045 /* PrivacyInfo.xcprivacy */; };
+		55F978DFD9F9C5CD02D53742 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD370C32218B5B76DA5671A6 /* ExpoModulesProvider.swift */; };
+		667CD476E64441292D7C4D56 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7120C3564D8DCC00F01E97A1 /* PrivacyInfo.xcprivacy */; };
+		9F3A8B2ADF41C2834B352D7E /* libPods-MereHumsafar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA45282234A384565792F20 /* libPods-MereHumsafar.a */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0CC94355383FAC0854C73CA9 /* Pods-humsafar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-humsafar.debug.xcconfig"; path = "Target Support Files/Pods-humsafar/Pods-humsafar.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* humsafar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = humsafar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = humsafar/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = humsafar/Info.plist; sourceTree = "<group>"; };
-		6C8DC9D40E7CBDBF92597045 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = humsafar/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		8DE55FDE959F52FEC50F7454 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-humsafar/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = humsafar/SplashScreen.storyboard; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* MereHumsafar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MereHumsafar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MereHumsafar/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MereHumsafar/Info.plist; sourceTree = "<group>"; };
+		16B4C01FF74E37236D3F9D64 /* Pods-MereHumsafar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MereHumsafar.debug.xcconfig"; path = "Target Support Files/Pods-MereHumsafar/Pods-MereHumsafar.debug.xcconfig"; sourceTree = "<group>"; };
+		7120C3564D8DCC00F01E97A1 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = MereHumsafar/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A75A7CF81CB04E03F9E65A07 /* Pods-MereHumsafar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MereHumsafar.release.xcconfig"; path = "Target Support Files/Pods-MereHumsafar/Pods-MereHumsafar.release.xcconfig"; sourceTree = "<group>"; };
+		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = MereHumsafar/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		CBBDE816B98A4591188A9666 /* libPods-humsafar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-humsafar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0EF5754605A1EEA79EE483A /* Pods-humsafar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-humsafar.release.xcconfig"; path = "Target Support Files/Pods-humsafar/Pods-humsafar.release.xcconfig"; sourceTree = "<group>"; };
+		DD370C32218B5B76DA5671A6 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-MereHumsafar/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		DDA45282234A384565792F20 /* libPods-MereHumsafar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MereHumsafar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = humsafar/AppDelegate.swift; sourceTree = "<group>"; };
-		F11748442D0722820044C1D9 /* humsafar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "humsafar-Bridging-Header.h"; path = "humsafar/humsafar-Bridging-Header.h"; sourceTree = "<group>"; };
+		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MereHumsafar/AppDelegate.swift; sourceTree = "<group>"; };
+		F11748442D0722820044C1D9 /* MereHumsafar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MereHumsafar-Bridging-Header.h"; path = "MereHumsafar/MereHumsafar-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,60 +37,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0C9C97D5AD4D9F72887F84 /* libPods-humsafar.a in Frameworks */,
+				9F3A8B2ADF41C2834B352D7E /* libPods-MereHumsafar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13B07FAE1A68108700A75B9A /* humsafar */ = {
+		0DF03236297474258881FF25 /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				81A33B282319030CFD17CBFE /* MereHumsafar */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* MereHumsafar */ = {
 			isa = PBXGroup;
 			children = (
 				F11748412D0307B40044C1D9 /* AppDelegate.swift */,
-				F11748442D0722820044C1D9 /* humsafar-Bridging-Header.h */,
+				F11748442D0722820044C1D9 /* MereHumsafar-Bridging-Header.h */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				6C8DC9D40E7CBDBF92597045 /* PrivacyInfo.xcprivacy */,
+				7120C3564D8DCC00F01E97A1 /* PrivacyInfo.xcprivacy */,
 			);
-			name = humsafar;
-			sourceTree = "<group>";
-		};
-		1F35A8DB854A4355858F52BC /* ExpoModulesProviders */ = {
-			isa = PBXGroup;
-			children = (
-				6E6BF215D5BDEADFEFA78DE4 /* humsafar */,
-			);
-			name = ExpoModulesProviders;
+			name = MereHumsafar;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				CBBDE816B98A4591188A9666 /* libPods-humsafar.a */,
+				DDA45282234A384565792F20 /* libPods-MereHumsafar.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5BB621C2EC052E4E44649719 /* Pods */ = {
+		7141B0957D521ED455EBF610 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0CC94355383FAC0854C73CA9 /* Pods-humsafar.debug.xcconfig */,
-				D0EF5754605A1EEA79EE483A /* Pods-humsafar.release.xcconfig */,
+				16B4C01FF74E37236D3F9D64 /* Pods-MereHumsafar.debug.xcconfig */,
+				A75A7CF81CB04E03F9E65A07 /* Pods-MereHumsafar.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		6E6BF215D5BDEADFEFA78DE4 /* humsafar */ = {
+		81A33B282319030CFD17CBFE /* MereHumsafar */ = {
 			isa = PBXGroup;
 			children = (
-				8DE55FDE959F52FEC50F7454 /* ExpoModulesProvider.swift */,
+				DD370C32218B5B76DA5671A6 /* ExpoModulesProvider.swift */,
 			);
-			name = humsafar;
+			name = MereHumsafar;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -103,12 +103,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* humsafar */,
+				13B07FAE1A68108700A75B9A /* MereHumsafar */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				5BB621C2EC052E4E44649719 /* Pods */,
-				1F35A8DB854A4355858F52BC /* ExpoModulesProviders */,
+				7141B0957D521ED455EBF610 /* Pods */,
+				0DF03236297474258881FF25 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* humsafar.app */,
+				13B07F961A680F5B00A75B9A /* MereHumsafar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,32 +129,32 @@
 				BB2F792C24A3F905000567C9 /* Expo.plist */,
 			);
 			name = Supporting;
-			path = humsafar/Supporting;
+			path = MereHumsafar/Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B07F861A680F5B00A75B9A /* humsafar */ = {
+		13B07F861A680F5B00A75B9A /* MereHumsafar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "humsafar" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MereHumsafar" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				6A4282689B9DB216D836A1CF /* [Expo] Configure project */,
+				2DE393C04132F0F9F6ED67A4 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				DAED8A79D390990697FF6EA2 /* [CP] Embed Pods Frameworks */,
+				933A8288345C1EB73534EDFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = humsafar;
-			productName = humsafar;
-			productReference = 13B07F961A680F5B00A75B9A /* humsafar.app */;
+			name = MereHumsafar;
+			productName = MereHumsafar;
+			productReference = 13B07F961A680F5B00A75B9A /* MereHumsafar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -170,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "humsafar" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MereHumsafar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -183,7 +183,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* humsafar */,
+				13B07F861A680F5B00A75B9A /* MereHumsafar */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +196,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				58B7154CCE74649B5DAD5295 /* PrivacyInfo.xcprivacy in Resources */,
+				667CD476E64441292D7C4D56 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,14 +233,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-humsafar-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MereHumsafar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6A4282689B9DB216D836A1CF /* [Expo] Configure project */ = {
+		2DE393C04132F0F9F6ED67A4 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -257,7 +257,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-humsafar/expo-configure-project.sh\"\n";
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-MereHumsafar/expo-configure-project.sh\"\n";
 		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -265,7 +265,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-humsafar/Pods-humsafar-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MereHumsafar/Pods-MereHumsafar-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
@@ -332,16 +332,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-humsafar/Pods-humsafar-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MereHumsafar/Pods-MereHumsafar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DAED8A79D390990697FF6EA2 /* [CP] Embed Pods Frameworks */ = {
+		933A8288345C1EB73534EDFB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-humsafar/Pods-humsafar-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MereHumsafar/Pods-MereHumsafar-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -350,7 +350,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-humsafar/Pods-humsafar-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MereHumsafar/Pods-MereHumsafar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -361,7 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				35FE3EF4E4841BBFB3B7ACA0 /* ExpoModulesProvider.swift in Sources */,
+				55F978DFD9F9C5CD02D53742 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,18 +370,18 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CC94355383FAC0854C73CA9 /* Pods-humsafar.debug.xcconfig */;
+			baseConfigurationReference = 16B4C01FF74E37236D3F9D64 /* Pods-MereHumsafar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = humsafar/humsafar.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MereHumsafar/MereHumsafar.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = humsafar/Info.plist;
+				INFOPLIST_FILE = MereHumsafar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -395,8 +395,8 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyaistic.humsafar;
-				PRODUCT_NAME = humsafar;
-				SWIFT_OBJC_BRIDGING_HEADER = "humsafar/humsafar-Bridging-Header.h";
+				PRODUCT_NAME = MereHumsafar;
+				SWIFT_OBJC_BRIDGING_HEADER = "MereHumsafar/MereHumsafar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,13 +406,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0EF5754605A1EEA79EE483A /* Pods-humsafar.release.xcconfig */;
+			baseConfigurationReference = A75A7CF81CB04E03F9E65A07 /* Pods-MereHumsafar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = humsafar/humsafar.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MereHumsafar/MereHumsafar.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = humsafar/Info.plist;
+				INFOPLIST_FILE = MereHumsafar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -426,8 +426,8 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyaistic.humsafar;
-				PRODUCT_NAME = humsafar;
-				SWIFT_OBJC_BRIDGING_HEADER = "humsafar/humsafar-Bridging-Header.h";
+				PRODUCT_NAME = MereHumsafar;
+				SWIFT_OBJC_BRIDGING_HEADER = "MereHumsafar/MereHumsafar-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -561,7 +561,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "humsafar" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MereHumsafar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -570,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "humsafar" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MereHumsafar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

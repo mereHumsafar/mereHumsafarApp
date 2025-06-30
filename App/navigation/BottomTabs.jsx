@@ -4,65 +4,87 @@ import Profile from '../screen/AppScreen/Profile';
 import Search from '../screen/AppScreen/Search';
 import HomeDrawer from './HomeDrawer';
 import NotificationNavigation from './NotificationNavigation';
+import Fontisto from '@expo/vector-icons/Fontisto';
+
 export default function BottomTabs() {
     const Tab = createBottomTabNavigator();
     return (
-        <Tab.Navigator >
-            <Tab.Screen   name="HomeNavigation"
-                options={{
-                    tabBarActiveTintColor: 'black',
-                    headerShown : false,
-                    title : 'Home',
-                    tabBarIcon: () => {
-                        return (
-                            <Ionicons name="home-outline" size={20} color="black" />
-                        )
-                    }
-                }}
+        <Tab.Navigator
+            screenOptions={{
+                tabBarActiveTintColor: 'black',
+                tabBarInactiveTintColor: '#b5b5b5',
 
-                component={HomeDrawer} />
-            <Tab.Screen name="NotificationNavigation"
+            }}
+        >
+            <Tab.Screen
+                name="HomeNavigation"
+                component={HomeDrawer}
                 options={{
-                    tabBarActiveTintColor: 'black',
-                    tabBarBadge: 3,
-                    headerShown : false,
-                    title : 'Notification',
+                    headerShown: false,
+                    title: 'For You',
+                    tabBarActiveTintColor: '#d90429',
+                    tabBarIcon: ({ focused }) => (
+                        <Ionicons
+                            name={focused ? 'heart' : 'heart-outline'}
+                            size={20}
+                            color={focused ? '#d90429' : '#b5b5b5'}
+                        />
+                    )
+                }}
+            />
+
+            <Tab.Screen
+                name="NotificationNavigation"
+                component={NotificationNavigation}
+                options={{
+                    headerShown: false,
+                    title: 'Notification',
                     tabBarBadgeStyle: {
                         backgroundColor: 'red',
                         color: 'white'
                     },
-                    tabBarIcon: () => {
-                        return (
-                            <Ionicons name="notifications-outline" size={20} color="black" />
-                        )
-                    }
-
-                }} component={NotificationNavigation} />
-
-            <Tab.Screen name="Search"
-                options={{
-                    tabBarActiveTintColor: 'black',
-                    tabBarIcon: () => {
-                        return (
-                            <Ionicons name="search-outline" size={20} color="black" />
-                        )
-                    }
+                    tabBarActiveTintColor: '#d90429',
+                    tabBarIcon: ({ focused }) => (
+                        <Ionicons
+                            name={focused ? 'notifications' : 'notifications-outline'}
+                            size={20}
+                            color={focused ? '#d90429' : '#b5b5b5'}
+                        />
+                    )
                 }}
+            />
+
+            <Tab.Screen
+                name="Search"
                 component={Search}
-            />
-            <Tab.Screen name="Profile"
                 options={{
-                    tabBarActiveTintColor: 'black',
-                    tabBarIcon: () => {
-                        return (
-                            <Ionicons name="person-outline" size={20} color="black" />
-                        )
-                    }
-
+                    title: 'Search',
+                    tabBarActiveTintColor: '#d90429',
+                    tabBarIcon: ({ focused }) => (
+                        <Ionicons
+                            name={focused ? 'search' : 'search-outline'}
+                            size={20}
+                            color={focused ? '#d90429' : '#b5b5b5'}
+                        />
+                    )
                 }}
-                component={Profile}
             />
 
+            <Tab.Screen
+                name="Profile"
+                component={Profile}
+                options={{
+                    title: 'Profile',
+                    tabBarActiveTintColor: '#d90429',
+                    tabBarIcon: ({ focused }) => (
+                        <Ionicons
+                            name={focused ? 'person' : 'person-outline'}
+                            size={20}
+                            color={focused ? '#d90429' : '#b5b5b5'}
+                        />
+                    )
+                }}
+            />
         </Tab.Navigator>
-    )
+    );
 }
