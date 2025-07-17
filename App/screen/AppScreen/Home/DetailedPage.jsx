@@ -41,16 +41,17 @@ const DetailedPage = () => {
 	return (
 		<View style={styles.container}>
 			<Animated.ScrollView
-			showsVerticalScrollIndicator={false}
+				showsVerticalScrollIndicator={false}
 
-			ref={scrollRef} scrollEventThrottle={16}>
+				ref={scrollRef} scrollEventThrottle={16}>
 				<Animated.Image
 					source={{
 						uri: item?.img
 					}}
 					style={[styles.image, imageAnimatedStyle]}
 				/>
-				<View style={{ backgroundColor: 'white' }} className="p-4  rounded-3xl ">
+				<View style={{
+					backgroundColor: 'white'}} className="p-4  rounded-3xl shadow-3xl -mt-3">
 					<Section title="Introduction">
 						<Text className="text-base  text-gray-800 mb-3">{item?.about}</Text>
 					</Section>
@@ -61,7 +62,7 @@ const DetailedPage = () => {
 						<Field icon="ruler-vertical" label="Height" value={item?.height || '5\'6"'} />
 						<Field icon="weight-hanging" label="Weight" value={item?.weight || '60kg'} />
 					</Section>
-					
+
 
 					<Section title="Education">
 						<Field icon="graduation-cap" label="Degree" value={item?.education || 'B.Sc Computer Science'} />
@@ -69,8 +70,8 @@ const DetailedPage = () => {
 					</Section>
 
 					<Section title="Contact">
-						<Field icon="envelope" label="Email" 
-						value={item?.email || 'ayesha@example.com'} />
+						<Field icon="envelope" label="Email"
+							value={item?.email || 'ayesha@example.com'} />
 						<Field icon="phone" label="Phone" value={item?.phone || '+91 9876543210'} />
 					</Section>
 
@@ -85,11 +86,11 @@ const DetailedPage = () => {
 			</Animated.ScrollView>
 			<View className="  bg-white px-4 py-3  flex-row items-center justify-between">
 				<Pressable className="flex-row w-[48%] py-2 gap-2 items-center justify-center mr-2 py- rounded-md border border-gray-300">
-				<Fontisto name="hipchat" size={20} color="gray" />
+					<Fontisto name="hipchat" size={20} color="gray" />
 					<Text className="text-lg font-semibold text-gray-800">Chat</Text>
 				</Pressable>
 				<Pressable className="flex-row gap-2 items-center justify-center ml-2 py-2 w-[48%] rounded-md bg-primary">
-				<Feather name="phone-call" size={20} color="white" />
+					<Feather name="phone-call" size={20} color="white" />
 					<Text className="text-lg font-semibold text-white">Call</Text>
 				</Pressable>
 			</View>

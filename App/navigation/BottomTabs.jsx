@@ -1,10 +1,11 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Profile from '../screen/AppScreen/Profile';
 import Search from '../screen/AppScreen/Search';
 import HomeDrawer from './HomeDrawer';
 import NotificationNavigation from './NotificationNavigation';
 import Fontisto from '@expo/vector-icons/Fontisto';
+import { BlurView } from 'expo-blur';
+import ProfileNavigation from './ProfileNavigation';
 
 export default function BottomTabs() {
     const Tab = createBottomTabNavigator();
@@ -71,9 +72,11 @@ export default function BottomTabs() {
             />
 
             <Tab.Screen
-                name="Profile"
-                component={Profile}
+                name="ProfileNavigation"
+                component={ProfileNavigation}
+
                 options={{
+                    headerShown: false,
                     title: 'Profile',
                     tabBarActiveTintColor: '#d90429',
                     tabBarIcon: ({ focused }) => (
