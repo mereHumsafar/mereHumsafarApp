@@ -28,3 +28,5 @@ project.xcworkspace
 
 # CocoaPods
 /Pods/
+# dependencies
+node_modules/
